@@ -83,8 +83,8 @@ export default function FeaturedProject() {
           {images.map((img) => (
             <motion.div
               key={img.src}
-              style={{ opacity: img.opacity, scale: imgScale }}
-              className="absolute inset-0"
+              style={{ opacity: img.opacity, scale: imgScale, transformStyle: 'preserve-3d' }}
+              className="absolute inset-0 will-change-transform will-change-opacity"
             >
               <img
                 src={img.src}

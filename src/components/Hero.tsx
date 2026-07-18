@@ -166,14 +166,10 @@ export default function Hero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2.4, ease, delay: 0.45 }}
         >
-          <motion.div
-            className="absolute inset-0"
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 25, ease: 'easeInOut', repeat: Infinity }}
-          >
+          <motion.div className="absolute inset-0">
             <video
               ref={videoRef}
-              className="hero-video hidden h-full w-full object-cover md:block"
+              className="hero-video h-full w-full object-cover"
               autoPlay
               muted
               loop
@@ -205,15 +201,23 @@ export default function Hero() {
       {/* Floating depth orbs */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute left-[10%] top-[20%] z-[2] h-44 w-44 rounded-full bg-terracotta/20 blur-3xl md:h-72 md:w-72"
-        style={{ x: orbX, y: orbY }}
+        className="pointer-events-none absolute left-[10%] top-[20%] z-[2] h-44 w-44 rounded-full md:h-72 md:w-72"
+        style={{ 
+          x: orbX, 
+          y: orbY,
+          background: 'radial-gradient(circle, rgba(196,112,85,0.4) 0%, rgba(196,112,85,0) 70%)'
+        }}
         animate={{ opacity: [0.2, 0.42, 0.2], scale: [1, 1.15, 1] }}
         transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute bottom-[26%] right-[8%] z-[2] h-52 w-52 rounded-full bg-white/10 blur-3xl md:h-80 md:w-80"
-        style={{ x: videoX, y: videoY }}
+        className="pointer-events-none absolute bottom-[26%] right-[8%] z-[2] h-52 w-52 rounded-full md:h-80 md:w-80"
+        style={{ 
+          x: videoX, 
+          y: videoY,
+          background: 'radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)'
+        }}
         animate={{ opacity: [0.12, 0.28, 0.12], scale: [1.05, 0.92, 1.05] }}
         transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut' }}
       />
