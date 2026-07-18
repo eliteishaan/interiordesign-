@@ -89,6 +89,7 @@ export default function FeaturedProject() {
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
             </motion.div>

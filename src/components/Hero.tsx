@@ -173,7 +173,7 @@ export default function Hero() {
           >
             <video
               ref={videoRef}
-              className="hero-video h-full w-full object-cover"
+              className="hero-video hidden h-full w-full object-cover md:block"
               autoPlay
               muted
               loop
@@ -260,7 +260,7 @@ export default function Hero() {
           </motion.p>
 
           <h1
-            className="font-serif text-[clamp(3.25rem,8vw,7.25rem)] font-light leading-[0.9] tracking-[-0.02em] text-white"
+            className="font-serif text-[clamp(2.75rem,8vw,7.25rem)] font-light leading-[0.9] tracking-[-0.02em] text-white"
             style={{
               textShadow:
                 '0 4px 48px rgba(0,0,0,0.65), 0 2px 8px rgba(0,0,0,0.45)',

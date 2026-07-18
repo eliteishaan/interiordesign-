@@ -92,6 +92,7 @@ export default function Journal() {
                 style={{ y: coverY }}
                 src={feature.image}
                 alt={feature.title}
+                loading="lazy"
                 className="absolute inset-0 h-[116%] w-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
               />
               
@@ -143,6 +144,7 @@ export default function Journal() {
                           style={{ y: sideY }}
                           src={article.image}
                           alt={article.title}
+                          loading="lazy"
                           className="absolute inset-0 h-[130%] w-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                         />
                       </div>

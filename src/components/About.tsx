@@ -51,96 +51,99 @@ export default function About() {
             className="col-span-12 overflow-hidden md:col-span-8"
           >
             <div className="relative aspect-[16/10] overflow-hidden md:aspect-[21/11]">
-              <motion.img
-                initial={{ scale: 1.15 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.6, ease }}
-                src="/images/about-space.jpg"
-                alt="Studio environment"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            style={{ y: img2Y }}
-            className="col-span-8 col-start-5 -mt-16 md:col-span-4 md:col-start-9 md:-mt-0 md:pt-24"
-          >
-            <div className="relative aspect-[3/4] overflow-hidden shadow-[-24px_24px_0_0_#F5F1EA] md:shadow-[-32px_32px_0_0_#F5F1EA]">
-              <img
-                src="/images/studio-materials.jpg"
-                alt="Material library"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <p className="mt-6 font-sans text-[0.625rem] uppercase tracking-[0.15em] text-charcoal/60">
-              Material library · Los Angeles
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Full-width pull quote */}
-      <div
-        ref={quoteRef}
-        className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36 lg:px-16"
-      >
-        <motion.blockquote
-          style={{ x: quoteX }}
-          className="relative border-l border-terracotta/40 pl-8 md:pl-14"
-        >
-          <motion.span
-            aria-hidden
-            initial={{ opacity: 0, y: 20 }}
-            animate={quoteInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease }}
-            className="mb-4 block font-serif text-[clamp(4rem,12vw,9rem)] font-light leading-none text-soft-line"
-          >
-            “
-          </motion.span>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={quoteInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.15, delay: 0.2, ease }}
-            className="max-w-4xl font-serif text-[clamp(1.5rem,3.4vw,2.85rem)] font-light italic leading-[1.3] tracking-[-0.01em] text-charcoal"
-          >
-            Architecture is the careful framing of life. Our role is to make that frame so well-considered that it disappears — leaving only the experience of being home.
-          </motion.p>
-          <motion.footer
-            initial={{ opacity: 0 }}
-            animate={quoteInView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="mt-10"
-          >
-            <cite className="font-sans text-[0.625rem] uppercase tracking-[0.2em] text-terracotta not-italic">
-              — Elena Rowan, Founding Principal
-            </cite>
-          </motion.footer>
-        </motion.blockquote>
-      </div>
-
-      {/* Team — staggered portraits */}
-      <div className="mx-auto max-w-[1600px] px-6 pb-28 md:px-10 md:pb-40 lg:px-16">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
-          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:col-span-7">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 48 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-10%' }}
-                transition={{ duration: 1, delay: i * 0.12, ease }}
-                className={i === 1 ? 'mt-10 md:mt-20' : ''}
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
                   <motion.img
-                    whileHover={{ scale: 1.04 }}
-                    transition={{ duration: 1.1, ease }}
-                    src={member.image}
-                    alt={member.name}
-                    className="h-full w-full object-cover grayscale-[15%]"
+                    initial={{ scale: 1.15 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.6, ease }}
+                    src="/images/about-space.jpg"
+                    alt="Studio environment"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
                   />
+                </div>
+              </motion.div>
+
+              <motion.div
+                style={{ y: img2Y }}
+                className="col-span-8 col-start-5 -mt-16 md:col-span-4 md:col-start-9 md:-mt-0 md:pt-24"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden shadow-[-24px_24px_0_0_#F5F1EA] md:shadow-[-32px_32px_0_0_#F5F1EA]">
+                  <img
+                    src="/images/studio-materials.jpg"
+                    alt="Material library"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <p className="mt-6 font-sans text-[0.625rem] uppercase tracking-[0.15em] text-charcoal/60">
+                  Material library · Los Angeles
+                </p>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Full-width pull quote */}
+          <div
+            ref={quoteRef}
+            className="mx-auto max-w-[1600px] px-6 py-24 md:px-10 md:py-36 lg:px-16"
+          >
+            <motion.blockquote
+              style={{ x: quoteX }}
+              className="relative border-l border-terracotta/40 pl-8 md:pl-14"
+            >
+              <motion.span
+                aria-hidden
+                initial={{ opacity: 0, y: 20 }}
+                animate={quoteInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, ease }}
+                className="mb-4 block font-serif text-[clamp(4rem,12vw,9rem)] font-light leading-none text-soft-line"
+              >
+                “
+              </motion.span>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={quoteInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1.15, delay: 0.2, ease }}
+                className="max-w-4xl font-serif text-[clamp(1.5rem,3.4vw,2.85rem)] font-light italic leading-[1.3] tracking-[-0.01em] text-charcoal"
+              >
+                Architecture is the careful framing of life. Our role is to make that frame so well-considered that it disappears — leaving only the experience of being home.
+              </motion.p>
+              <motion.footer
+                initial={{ opacity: 0 }}
+                animate={quoteInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                className="mt-10"
+              >
+                <cite className="font-sans text-[0.625rem] uppercase tracking-[0.2em] text-terracotta not-italic">
+                  — Elena Rowan, Founding Principal
+                </cite>
+              </motion.footer>
+            </motion.blockquote>
+          </div>
+
+          {/* Team — staggered portraits */}
+          <div className="mx-auto max-w-[1600px] px-6 pb-28 md:px-10 md:pb-40 lg:px-16">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
+              <div className="grid grid-cols-2 gap-4 md:gap-8 lg:col-span-7">
+                {team.map((member, i) => (
+                  <motion.div
+                    key={member.name}
+                    initial={{ opacity: 0, y: 48 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-10%' }}
+                    transition={{ duration: 1, delay: i * 0.12, ease }}
+                    className={i === 1 ? 'mt-10 md:mt-20' : ''}
+                  >
+                    <div className="relative aspect-[3/4] overflow-hidden">
+                      <motion.img
+                        whileHover={{ scale: 1.04 }}
+                        transition={{ duration: 1.1, ease }}
+                        src={member.image}
+                        alt={member.name}
+                        loading="lazy"
+                        className="h-full w-full object-cover grayscale-[15%]"
+                      />
                 </div>
                 <h3 className="mt-5 font-serif text-xl font-light text-charcoal md:text-2xl">
                   {member.name}

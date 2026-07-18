@@ -84,6 +84,7 @@ export default function SelectedWorks() {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />

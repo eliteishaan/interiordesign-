@@ -154,6 +154,7 @@ export default function Materials() {
                 <img
                   src={current.image}
                   alt={current.name}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
